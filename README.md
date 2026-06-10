@@ -17,14 +17,14 @@ Creative developer who heavily relies on AI to bring ideas to life. I enjoy blen
 - 🎨 Designing delightful and intuitive interfaces  
 - 🚀 Experimenting with new technologies and ideas
 
-## Tech & AI Tools
+## Tools & Technologies
 
-| Category          | Tools                                      |
-|-------------------|--------------------------------------------|
-| **Development**   | JavaScript, TypeScript, React, Next.js     |
-| **AI Tools**      | ChatGPT, Claude, Cursor, Midjourney, v0    |
-| **Design**        | Figma, Framer, Tailwind CSS                |
-| **Other**         | Git, Vercel, Supabase                      |
+| Category              | Tools |
+|-----------------------|-------|
+| **Development**       | JavaScript, TypeScript, React, Next.js, Python, **Shell**, PHP |
+| **Design & Creative** | Figma, Framer, Tailwind CSS, Webflow |
+| **AI Tools**          | ChatGPT, Claude, Cursor, Midjourney, v0, Runway |
+| **Other**             | Git, Vercel, Supabase, Notion |
 
 ## GitHub Stats
 
@@ -37,4 +37,4 @@ Creative developer who heavily relies on AI to bring ideas to life. I enjoy blen
 - 💼 [LinkedIn](#)
 - 🐦 [Twitter / X](#)
 - 📧 [Email](#)
-- 🌐 [Portfolio / Website](#)
+- 🌐 [Portfolio](#)
