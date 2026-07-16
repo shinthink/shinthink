@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      @keyframes flicker { 0%,100% { opacity:1 } 50% { opacity:0.7 } }
+      @keyframes glow { 0%,100% { filter:drop-shadow(0 0 3px #dc143c) } 50% { filter:drop-shadow(0 0 8px #ff4444) } }
+      @keyframes scan { 0% { transform:translateY(-20px); opacity:0 } 10% { opacity:1 } 90% { opacity:1 }
+                        100% { transform:translateY(80px); opacity:0 } }
+      @keyframes blink { 0%,95%,100% { opacity:1 } 97% { opacity:0 } }
+      @keyframes float { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-3px) } }
+      .glow { animation:glow 3s ease-in-out infinite }
+      .scan { animation:scan 2.5s linear infinite }
+      .eye { animation:blink 4s infinite }
+      .float { animation:float 2s ease-in-out infinite }
+      .flicker { animation:flicker 2s ease-in-out infinite }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dc143c"/>
+      <stop offset="50%" stop-color="#ff4444"/>
+      <stop offset="100%" stop-color="#dc143c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#bg)" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Hood -->
+  <ellipse cx="100" cy="55" rx="42" ry="38" fill="#1c1c1c"/>
+  <path d="M58 55 Q58 15 100 15 Q142 15 142 55 L138 60 Q138 25 100 25 Q62 25 62 60 Z" fill="#2a2a2a"/>
+
+  <!-- Visor/glasses (hacker style) -->
+  <rect class="glow" x="70" y="52" width="20" height="14" rx="2" fill="url(#visor)" opacity="0.9"/>
+  <rect class="glow" x="110" y="52" width="20" height="14" rx="2" fill="url(#visor)" opacity="0.9"/>
+  <rect x="90" y="55" width="20" height="6" rx="1" fill="#dc143c" opacity="0.6"/>
+
+  <!-- Eyes behind visor -->
+  <circle class="eye" cx="80" cy="59" r="3" fill="#fff" opacity="0.8"/>
+  <circle class="eye" cx="120" cy="59" r="3" fill="#fff" opacity="0.8"/>
+
+  <!-- Mask/bandana -->
+  <rect x="60" y="68" width="80" height="4" rx="2" fill="#dc143c" opacity="0.7"/>
+
+  <!-- Body/Jacket -->
+  <rect x="70" y="72" width="60" height="45" rx="5" fill="#1c1c1c"/>
+  <rect x="72" y="74" width="56" height="42" rx="3" fill="#222"/>
+
+  <!-- Collar -->
+  <path d="M70 72 L85 85 L100 78 L115 85 L130 72" fill="none" stroke="#dc143c" stroke-width="2" opacity="0.5"/>
+
+  <!-- Circuit lines on jacket -->
+  <line class="flicker" x1="78" y1="90" x2="98" y2="90" stroke="#dc143c" stroke-width="1" opacity="0.4"/>
+  <line class="flicker" x1="78" y1="95" x2="92" y2="95" stroke="#dc143c" stroke-width="1" opacity="0.3"/>
+  <circle cx="100" cy="90" r="1.5" fill="#dc143c" opacity="0.6"/>
+  <circle cx="94" cy="95" r="1" fill="#dc143c" opacity="0.4"/>
+
+  <!-- Laptop -->
+  <rect x="55" y="120" width="90" height="55" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="58" y="123" width="84" height="45" rx="2" fill="#0d1117"/>
+
+  <!-- Code on screen -->
+  <text x="65" y="132" font-family="monospace" font-size="5" fill="#dc143c" opacity="0.8">$ ./exploit.py -t target</text>
+  <text x="65" y="140" font-family="monospace" font-size="5" fill="#3fb950" opacity="0.7">[+] CVE-2026-XXXXX</text>
+  <text x="65" y="148" font-family="monospace" font-size="5" fill="#3fb950" opacity="0.7">[!] RCE CONFIRMED</text>
+  <text x="65" y="156" font-family="monospace" font-size="5" fill="#58a6ff" opacity="0.6">$ uid=0(root) gid=0(root)</text>
+
+  <!-- Scan line -->
+  <line class="scan" x1="58" y1="123" x2="142" y2="123" stroke="#dc143c" stroke-width="1" opacity="0.3"/>
+
+  <!-- Keyboard glow -->
+  <rect x="60" y="165" width="80" height="8" rx="2" fill="#1c1c1c"/>
+  <line x1="62" y1="168" x2="138" y2="168" stroke="#30363d" stroke-width="0.5"/>
+
+  <!-- Bottom matrix rain -->
+  <text x="62" y="180" font-family="monospace" font-size="5" fill="#dc143c" opacity="0.4">01 10 00 11 01</text>
+
+  <!-- Corner accents -->
+  <path d="M10 20 L10 10 L20 10" fill="none" stroke="#dc143c" stroke-width="2" opacity="0.5"/>
+  <path d="M190 20 L190 10 L180 10" fill="none" stroke="#dc143c" stroke-width="2" opacity="0.5"/>
+  <path d="M10 180 L10 190 L20 190" fill="none" stroke="#dc143c" stroke-width="2" opacity="0.5"/>
+  <path d="M190 180 L190 190 L180 190" fill="none" stroke="#dc143c" stroke-width="2" opacity="0.5"/>
+</svg>
